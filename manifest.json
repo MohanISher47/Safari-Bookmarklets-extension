@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmarklet Collector",
+  "version": "1.1",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://mohanisher47.github.io/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "img/icon.png"
+  }
+}
