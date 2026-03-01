@@ -1,5 +1,5 @@
 name: Build Safari Extension
-on: [push, workflow_dispatch] # Runs every time you upload code or click a button
+on: [push, workflow_dispatch]
 
 jobs:
   build-safari:
@@ -10,18 +10,17 @@ jobs:
 
       - name: Convert to Safari Extension
         run: |
-          # This command creates the Xcode project from your Chrome files
-          # Replace 'Bookmarklets' with whatever you want the app named
-          xcrun safari-web-extension-converter . --no-open --project-location ./SafariExtension --app-name "Bookmarklets"
+          # Converts your folder into an Xcode project
+          xcrun safari-web-extension-converter . --no-open --project-location ./SafariProject --app-name "LemonadeCity"
 
-      - name: Build the App
+      - name: Build macOS App
         run: |
-          # This builds the actual .app file from the Xcode project
-          cd SafariExtension/Bookmarklets
-          xcodebuild -project "Bookmarklets.xcodeproj" -scheme "Bookmarklets (macOS)" -configuration Debug clean build CONFIGURATION_BUILD_DIR="../../output"
+          cd SafariProject/LemonadeCity
+          # Compiles the Xcode project into a usable .app
+          xcodebuild -project "LemonadeCity.xcodeproj" -scheme "LemonadeCity (macOS)" -configuration Debug clean build CONFIGURATION_BUILD_DIR="../../output"
 
-      - name: Upload Finished App
+      - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Safari-Extension-App
-          path: output/Bookmarklets.app
+          path: output/LemonadeCity.app
