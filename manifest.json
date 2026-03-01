@@ -7,6 +7,7 @@
     "https://mohanisher47.github.io/*"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "img/mstaums.png"
   }
 }
