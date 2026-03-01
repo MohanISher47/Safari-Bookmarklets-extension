@@ -1,2 +1,2 @@
-# LC-Extension
-An Extension made for the employees of Lemonade City. Hope all our employees love it
+# The Bookmarklets Extension by T.E.D.A.
+An Extension made to make getting and using bookmarklets way easier
