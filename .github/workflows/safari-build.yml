@@ -11,16 +11,16 @@ jobs:
       - name: Convert to Safari Extension
         run: |
           # Converts your folder into an Xcode project
-          xcrun safari-web-extension-converter . --no-open --project-location ./SafariProject --app-name "LemonadeCity"
+          xcrun safari-web-extension-converter . --no-open --project-location ./SafariProject --app-name "Bookmarklets"
 
       - name: Build macOS App
         run: |
-          cd SafariProject/LemonadeCity
+          cd SafariProject/Bookmarklets
           # Compiles the Xcode project into a usable .app
-          xcodebuild -project "LemonadeCity.xcodeproj" -scheme "LemonadeCity (macOS)" -configuration Debug clean build CONFIGURATION_BUILD_DIR="../../output"
+          xcodebuild -project "Bookmarklets.xcodeproj" -scheme "Bookmarklets (macOS)" -configuration Debug clean build CONFIGURATION_BUILD_DIR="../../output"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Safari-Extension-App
-          path: output/LemonadeCity.app
+          name: Bookmarklets-App
+          path: output/Bookmarklets.app
