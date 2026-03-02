@@ -46,7 +46,7 @@ async function saveBookmarklet(bm) {
 document.addEventListener('DOMContentLoaded', async () => {
   const SCRIPT_URL = "https://mohanisher47.github.io/script.js";
   const foundList = document.getElementById('found-list');
-  foundList.innerHTML = '<i>Searching Lemonade City...</i>';
+  foundList.innerHTML = '<i>Getting Bookmarklets ...</i>';
 
   // Load existing library
   displaySaved();
