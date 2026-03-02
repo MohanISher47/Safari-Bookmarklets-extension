@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Lemonade City Collector",
+  "name": "Bookmarklet Collector",
+  "description": "A Chrome extension to collect and manage bookmarklets. (Collects from https://mohanisher47.github.io/)",
   "version": "1.0",
   "permissions": ["storage", "activeTab", "scripting"],
   "host_permissions": [
